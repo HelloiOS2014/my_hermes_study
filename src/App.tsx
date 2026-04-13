@@ -37,6 +37,20 @@ import { ToolInternals } from "./sections/layer3/ToolInternals";
 import { GatewayArchitecture } from "./sections/layer3/GatewayArchitecture";
 import { PTC } from "./sections/layer3/PTC";
 import { RLGepa } from "./sections/layer3/RLGepa";
+// Recipes
+import { CodingAssistant } from "./sections/recipes/CodingAssistant";
+import { Messenger } from "./sections/recipes/Messenger";
+import { SmartHome } from "./sections/recipes/SmartHome";
+import { ResearchAssistant } from "./sections/recipes/ResearchAssistant";
+import { CommunityGallery } from "./sections/recipes/CommunityGallery";
+// Ops
+import { Troubleshoot } from "./sections/ops/Troubleshoot";
+import { Patterns } from "./sections/ops/Patterns";
+import { Upgrade } from "./sections/ops/Upgrade";
+// Appendix
+import { ConfigReference } from "./sections/appendix/ConfigReference";
+import { Ecosystem } from "./sections/appendix/Ecosystem";
+import { Glossary } from "./sections/appendix/Glossary";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -82,6 +96,20 @@ export default function App() {
           <GatewayArchitecture />
           <PTC />
           <RLGepa />
+          {/* 实战菜谱 */}
+          <CodingAssistant />
+          <Messenger />
+          <SmartHome />
+          <ResearchAssistant />
+          <CommunityGallery />
+          {/* 运维手册 */}
+          <Troubleshoot />
+          <Patterns />
+          <Upgrade />
+          {/* 附录 */}
+          <ConfigReference />
+          <Ecosystem />
+          <Glossary />
         </main>
       </div>
       <Footer />

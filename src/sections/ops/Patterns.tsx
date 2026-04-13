@@ -58,7 +58,7 @@ const goodPatterns: PatternCardProps[] = [
   {
     title: "Context 管理",
     description:
-      "长对话会导致 context window 膨胀，不仅增加费用，还可能让模型"忘记"早期关键信息或产生幻觉。",
+      "长对话会导致 context window 膨胀，不仅增加费用，还可能让模型「忘记」早期关键信息或产生幻觉。",
     solution:
       "主动使用 /compress 压缩上下文，保持对话聚焦在单一任务上。多个不相关任务应开新 session。",
     variant: "good",
@@ -77,7 +77,7 @@ const antiPatterns: PatternCardProps[] = [
   {
     title: "Skill 被自动覆盖",
     description:
-      "Agent 在执行 Skill 后会评估结果，如果它认为可以"改进"就会自动覆盖你的手动编辑——这是社区反馈最多的痛点。",
+      "Agent 在执行 Skill 后会评估结果，如果它认为可以「改进」就会自动覆盖你的手动编辑——这是社区反馈最多的痛点。",
     solution:
       "用 Git 管理 Skills 目录，或在 Skill frontmatter 中设置高版本号锁定。详见 Layer 2 防覆盖策略。",
     variant: "bad",
