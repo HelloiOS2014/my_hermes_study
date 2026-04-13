@@ -13,11 +13,11 @@ interface Module {
 }
 
 const modules: Module[] = [
-  { id: "core", label: "Agent Core", description: "\u6838\u5FC3\u8C03\u5EA6\u5668\uFF0C\u7BA1\u7406\u5BF9\u8BDD\u5FAA\u73AF\u548C\u5DE5\u5177\u8C03\u7528", color: "#58a6ff", x: 230, y: 40, linkTo: "cli-overview" },
-  { id: "tools", label: "Tools", description: "47+ \u5185\u7F6E\u5DE5\u5177\uFF0C\u901A\u8FC7 MCP \u534F\u8BAE\u6269\u5C55", color: "#3fb950", x: 60, y: 160, linkTo: "tool-explorer" },
-  { id: "memory", label: "Memory", description: "\u8DE8\u4F1A\u8BDD\u8BB0\u5FC6\u7CFB\u7EDF\uFF0C\u8BB0\u4F4F\u4F60\u7684\u504F\u597D", color: "#d29922", x: 230, y: 160, linkTo: "memory-system" },
-  { id: "skills", label: "Skills", description: "\u53EF\u5B66\u4E60\u7684\u80FD\u529B\u6A21\u5757\uFF0C\u6301\u7EED\u8FDB\u5316", color: "#f85149", x: 400, y: 160, linkTo: "skills-system" },
-  { id: "gateway", label: "Gateway", description: "\u8DE820+ \u5E73\u53F0\u7684\u6D88\u606F\u7F51\u5173", color: "#a371f7", x: 230, y: 290, linkTo: "messaging-platforms" },
+  { id: "core", label: "Agent Core", description: "核心调度器，管理对话循环和工具调用", color: "#58a6ff", x: 230, y: 40, linkTo: "cli-overview" },
+  { id: "tools", label: "Tools", description: "47+ 内置工具，通过 MCP 协议扩展", color: "#3fb950", x: 60, y: 160, linkTo: "tool-explorer" },
+  { id: "memory", label: "Memory", description: "跨会话记忆系统，记住你的偏好", color: "#d29922", x: 230, y: 160, linkTo: "memory-system" },
+  { id: "skills", label: "Skills", description: "可学习的能力模块，持续进化", color: "#f85149", x: 400, y: 160, linkTo: "skills-system" },
+  { id: "gateway", label: "Gateway", description: "跨20+ 平台的消息网关", color: "#a371f7", x: 230, y: 290, linkTo: "messaging-platforms" },
 ];
 
 const connections: [string, string][] = [
@@ -43,8 +43,8 @@ export function ArchitectureOverview() {
   return (
     <Section id="architecture">
       <TypewriterTitle
-        text="0.4 \u67B6\u6784\u9E1F\u77B0"
-        subtitle="\u70B9\u51FB\u6A21\u5757\u8DF3\u8F6C\u5230\u8BE6\u7EC6\u7AE0\u8282"
+        text="0.4 架构鸟瞰"
+        subtitle="点击模块跳转到详细章节"
       />
 
       <div className="mt-4 flex justify-center">
