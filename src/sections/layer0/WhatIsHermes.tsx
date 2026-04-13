@@ -57,8 +57,11 @@ export function WhatIsHermes() {
       <video
         className="mt-8 w-full rounded-lg border border-border"
         src={`${import.meta.env.BASE_URL}hermes-overview.mp4`}
-        controls
-        preload="metadata"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
       />
 
       <ExtendedReading
