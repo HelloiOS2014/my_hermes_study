@@ -1,11 +1,28 @@
 import { useEffect, useState } from "react";
-import { codeToHtml } from "shiki";
+import { createHighlighter, type Highlighter } from "shiki";
+
+let highlighterPromise: Promise<Highlighter> | null = null;
+function getHighlighter() {
+  if (!highlighterPromise) {
+    highlighterPromise = createHighlighter({
+      themes: ["github-dark-default"],
+      langs: ["bash", "yaml", "markdown", "typescript", "python", "json"],
+    });
+  }
+  return highlighterPromise;
+}
 
 interface CodeBlockProps { code: string; lang: string; title?: string; }
 
 export function CodeBlock({ code, lang, title }: CodeBlockProps) {
   const [html, setHtml] = useState("");
-  useEffect(() => { codeToHtml(code.trim(), { lang, theme: "github-dark-default" }).then(setHtml); }, [code, lang]);
+  useEffect(() => {
+    getHighlighter().then((h) => {
+      const supported = h.getLoadedLanguages();
+      const useLang = supported.includes(lang) ? lang : "text";
+      setHtml(h.codeToHtml(code.trim(), { lang: useLang, theme: "github-dark-default" }));
+    });
+  }, [code, lang]);
   const copy = () => { navigator.clipboard.writeText(code.trim()); };
 
   return (

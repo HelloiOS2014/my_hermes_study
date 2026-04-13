@@ -7,5 +7,6 @@ export default defineConfig({
   base: "/my_hermes_study/",
   build: {
     outDir: "dist",
+    chunkSizeWarningLimit: 800,
   },
 });

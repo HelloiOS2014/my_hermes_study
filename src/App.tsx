@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Header } from "./components/layout/Header";
 import { Sidebar } from "./components/layout/Sidebar";
 import { Footer } from "./components/layout/Footer";
@@ -17,11 +18,13 @@ import { MessagingPlatforms } from "./sections/layer1/MessagingPlatforms";
 import { TerminalBackends } from "./sections/layer1/TerminalBackends";
 
 export default function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-bg-primary text-text-primary">
-      <Header />
+      <Header onMenuToggle={() => setMenuOpen(!menuOpen)} />
       <div className="mx-auto flex max-w-[1200px]">
-        <Sidebar />
+        <Sidebar mobileOpen={menuOpen} onClose={() => setMenuOpen(false)} />
         <main className="min-w-0 flex-1 px-6 lg:px-12">
           <WhatIsHermes />
           <Comparison />

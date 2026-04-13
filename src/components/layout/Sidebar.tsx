@@ -1,12 +1,20 @@
 import { navigation, allSectionIds } from "../../data/navigation";
 import { useActiveSection } from "../../hooks/useActiveSection";
 
-export function Sidebar() {
-  const activeId = useActiveSection(allSectionIds);
-  const scrollTo = (id: string) => { document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); };
+interface SidebarProps {
+  mobileOpen?: boolean;
+  onClose?: () => void;
+}
 
-  return (
-    <nav className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-60 shrink-0 overflow-y-auto border-r border-border p-4 lg:block">
+export function Sidebar({ mobileOpen = false, onClose }: SidebarProps) {
+  const activeId = useActiveSection(allSectionIds);
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    onClose?.();
+  };
+
+  const navContent = (
+    <>
       {navigation.map((group) => (
         <div key={group.label} className="mb-6">
           <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-text-muted">{group.emoji} {group.label}</h3>
@@ -19,6 +27,25 @@ export function Sidebar() {
           </ul>
         </div>
       ))}
-    </nav>
+    </>
+  );
+
+  return (
+    <>
+      {/* Desktop sidebar */}
+      <nav className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-60 shrink-0 overflow-y-auto border-r border-border p-4 lg:block">
+        {navContent}
+      </nav>
+
+      {/* Mobile overlay */}
+      {mobileOpen && (
+        <>
+          <div className="fixed inset-0 z-40 bg-black/50 lg:hidden" onClick={onClose} />
+          <nav className="fixed left-0 top-14 z-50 h-[calc(100vh-3.5rem)] w-64 overflow-y-auto border-r border-border bg-bg-primary p-4 lg:hidden">
+            {navContent}
+          </nav>
+        </>
+      )}
+    </>
   );
 }
