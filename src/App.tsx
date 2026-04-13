@@ -2,10 +2,12 @@ import { useState } from "react";
 import { Header } from "./components/layout/Header";
 import { Sidebar } from "./components/layout/Sidebar";
 import { Footer } from "./components/layout/Footer";
+// Layer 0
 import { WhatIsHermes } from "./sections/layer0/WhatIsHermes";
 import { Comparison } from "./sections/layer0/Comparison";
 import { QuickStart } from "./sections/layer0/QuickStart";
 import { ArchitectureOverview } from "./sections/layer0/ArchitectureOverview";
+// Layer 1
 import { CLIOverview } from "./sections/layer1/CLIOverview";
 import { ModelSelection } from "./sections/layer1/ModelSelection";
 import { SoulMd } from "./sections/layer1/SoulMd";
@@ -16,6 +18,25 @@ import { ToolExplorer } from "./sections/layer1/ToolExplorer";
 import { Security } from "./sections/layer1/Security";
 import { MessagingPlatforms } from "./sections/layer1/MessagingPlatforms";
 import { TerminalBackends } from "./sections/layer1/TerminalBackends";
+// Layer 2
+import { CustomTool } from "./sections/layer2/CustomTool";
+import { PluginHooks } from "./sections/layer2/PluginHooks";
+import { FullPlugin } from "./sections/layer2/FullPlugin";
+import { MCPServer } from "./sections/layer2/MCPServer";
+import { QualitySkill } from "./sections/layer2/QualitySkill";
+import { MultiAgent } from "./sections/layer2/MultiAgent";
+import { CronAutomation } from "./sections/layer2/CronAutomation";
+import { MixtureOfAgents } from "./sections/layer2/MixtureOfAgents";
+// Layer 3
+import { FunctionCalling } from "./sections/layer3/FunctionCalling";
+import { HermesModels } from "./sections/layer3/HermesModels";
+import { AgentLoop } from "./sections/layer3/AgentLoop";
+import { PromptBuilder } from "./sections/layer3/PromptBuilder";
+import { ContextCompression } from "./sections/layer3/ContextCompression";
+import { ToolInternals } from "./sections/layer3/ToolInternals";
+import { GatewayArchitecture } from "./sections/layer3/GatewayArchitecture";
+import { PTC } from "./sections/layer3/PTC";
+import { RLGepa } from "./sections/layer3/RLGepa";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,10 +47,12 @@ export default function App() {
       <div className="mx-auto flex max-w-[1200px]">
         <Sidebar mobileOpen={menuOpen} onClose={() => setMenuOpen(false)} />
         <main className="min-w-0 flex-1 px-6 lg:px-12">
+          {/* Layer 0 · 初见 */}
           <WhatIsHermes />
           <Comparison />
           <QuickStart />
           <ArchitectureOverview />
+          {/* Layer 1 · 上手 */}
           <CLIOverview />
           <ModelSelection />
           <SoulMd />
@@ -40,6 +63,25 @@ export default function App() {
           <Security />
           <MessagingPlatforms />
           <TerminalBackends />
+          {/* Layer 2 · 扩展 */}
+          <CustomTool />
+          <PluginHooks />
+          <FullPlugin />
+          <MCPServer />
+          <QualitySkill />
+          <MultiAgent />
+          <CronAutomation />
+          <MixtureOfAgents />
+          {/* Layer 3 · 深入 */}
+          <FunctionCalling />
+          <HermesModels />
+          <AgentLoop />
+          <PromptBuilder />
+          <ContextCompression />
+          <ToolInternals />
+          <GatewayArchitecture />
+          <PTC />
+          <RLGepa />
         </main>
       </div>
       <Footer />

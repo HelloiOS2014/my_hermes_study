@@ -70,7 +70,7 @@ const openaiExample = [
 export function FunctionCalling() {
   return (
     <Section id="function-calling">
-      <TypewriterTitle text="Layer 3 \u00B7 深入" subtitle="理解引擎" />
+      <TypewriterTitle text="Layer 3 · 深入" subtitle="理解引擎" />
 
       <h3 className="text-xl font-semibold">Hermes Function Calling Format</h3>
       <p className="mt-3 leading-relaxed text-text-secondary">

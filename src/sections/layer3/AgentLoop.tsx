@@ -144,7 +144,7 @@ export function AgentLoop() {
       {/* Video placeholder */}
       <div className="mt-8 flex aspect-video items-center justify-center rounded-lg border border-border bg-bg-card">
         <div className="text-center text-text-muted">
-          <div className="text-4xl">{"\u25B6"}</div>
+          <div className="text-4xl">{"▶"}</div>
           <p className="mt-2 text-sm">
             Agent Loop 生命周期动画 (~45s) -- Remotion 视频待集成
           </p>

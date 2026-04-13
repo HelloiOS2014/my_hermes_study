@@ -85,7 +85,7 @@ export function GatewayArchitecture() {
                 <div className="mt-1 text-xs text-text-muted">{node.sub}</div>
               </div>
               {i < gatewayFlow.length - 1 && (
-                <div className="text-text-muted">{"\u2192"}</div>
+                <div className="text-text-muted">{"→"}</div>
               )}
             </div>
           ))}
