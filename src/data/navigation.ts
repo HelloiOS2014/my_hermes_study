@@ -53,6 +53,32 @@ export const navigation: NavGroup[] = [
       { id: "rl-gepa", label: "RL + GEPA 自进化" },
     ],
   },
+  {
+    label: "实战菜谱", emoji: "🍳",
+    items: [
+      { id: "recipe-coding", label: "个人编程助手" },
+      { id: "recipe-messenger", label: "多平台信息管家" },
+      { id: "recipe-smarthome", label: "智能家居中心" },
+      { id: "recipe-research", label: "研究助理 Agent" },
+      { id: "recipe-gallery", label: "社区案例展廊" },
+    ],
+  },
+  {
+    label: "运维手册", emoji: "🔧",
+    items: [
+      { id: "ops-troubleshoot", label: "故障排查" },
+      { id: "ops-patterns", label: "Patterns & Anti-patterns" },
+      { id: "ops-upgrade", label: "升级与迁移" },
+    ],
+  },
+  {
+    label: "附录", emoji: "📎",
+    items: [
+      { id: "appendix-config", label: "config.yaml 速查" },
+      { id: "appendix-ecosystem", label: "生态地图" },
+      { id: "appendix-glossary", label: "术语表" },
+    ],
+  },
 ];
 
 export const allSectionIds = navigation.flatMap((g) => g.items.map((item) => item.id));
