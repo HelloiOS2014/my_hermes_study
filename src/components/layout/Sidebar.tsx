@@ -33,7 +33,7 @@ export function Sidebar({ mobileOpen = false, onClose }: SidebarProps) {
   return (
     <>
       {/* Desktop sidebar */}
-      <nav className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-60 shrink-0 overflow-y-auto border-r border-border p-4 lg:block">
+      <nav className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-60 shrink-0 overflow-y-auto border-r border-border/30 bg-bg-primary/50 p-4 lg:block">
         {navContent}
       </nav>
 

@@ -28,18 +28,18 @@ export function TypewriterTitle({ text, subtitle, className = "", inView = true,
         clearInterval(interval);
         setTimeout(() => setDone(true), 300);
       }
-    }, 60);
+    }, 55);
     return () => clearInterval(interval);
   }, [inView, text, reducedMotion]);
 
   return (
-    <div className={`mb-8 ${className}`}>
-      <h2 className="text-3xl font-bold lg:text-4xl">
+    <div className={`layer-divider mb-10 ${className}`}>
+      <h2 className="gradient-text-animated text-4xl font-bold tracking-tight lg:text-5xl">
         <span>{text.slice(0, displayedChars)}</span>
-        {!done && <span className="ml-0.5 inline-block h-8 w-0.5 animate-cursor bg-accent" />}
+        {!done && <span className="ml-0.5 inline-block h-10 w-0.5 animate-cursor bg-accent" />}
       </h2>
       {subtitle && done && (
-        <p className="mt-2 text-lg text-text-secondary animate-fade-in-up">{subtitle}</p>
+        <p className="mt-3 text-lg tracking-wide text-text-secondary animate-fade-in-up">{subtitle}</p>
       )}
     </div>
   );

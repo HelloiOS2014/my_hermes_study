@@ -27,7 +27,7 @@ export function WhatIsHermes() {
         {stats.map((s) => (
           <div
             key={s.label}
-            className="rounded-lg border border-border bg-bg-card p-5 text-center transition-colors hover:border-accent/50"
+            className="glass-card rounded-xl p-5 text-center transition-all"
           >
             <div className="text-3xl font-bold text-accent">{s.value}</div>
             <div className="mt-1 text-sm text-text-muted">{s.label}</div>
@@ -53,29 +53,29 @@ export function WhatIsHermes() {
         </blockquote>
       </div>
 
-      {/* Video Placeholder */}
-      <div className="mt-8 flex aspect-video items-center justify-center rounded-lg border border-border bg-bg-card">
-        <div className="text-center text-text-muted">
-          <div className="text-4xl">{"▶"}</div>
-          <p className="mt-2 text-sm">概览视频 (~30s)</p>
-        </div>
-      </div>
+      {/* Overview Video */}
+      <video
+        className="mt-8 w-full rounded-lg border border-border"
+        src={`${import.meta.env.BASE_URL}hermes-overview.mp4`}
+        controls
+        preload="metadata"
+      />
 
       <ExtendedReading
         links={[
           {
             title: "Hermes Agent GitHub 仓库",
-            url: "https://github.com/hermes-ai/hermes-agent",
+            url: "https://github.com/NousResearch/hermes-agent",
             source: "GitHub",
           },
           {
             title: "An Honest Review of Hermes Agent",
-            url: "https://dev.to/hermes-honest-review",
+            url: "https://dev.to/george_larson_3cc4a57b08b/hermes-agent-honest-review-1557",
             source: "DEV Community",
           },
           {
             title: "Hermes Agent 官方文档",
-            url: "https://docs.hermes-agent.dev",
+            url: "https://hermes-agent.nousresearch.com/docs/",
             source: "Official Docs",
           },
         ]}
