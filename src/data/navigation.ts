@@ -26,6 +26,33 @@ export const navigation: NavGroup[] = [
       { id: "terminal-backends", label: "终端后端" },
     ],
   },
+  {
+    label: "Layer 2 · 扩展", emoji: "🔌",
+    items: [
+      { id: "custom-tool", label: "写自定义 Tool" },
+      { id: "plugin-hooks", label: "Plugin Hooks" },
+      { id: "full-plugin", label: "写完整 Plugin" },
+      { id: "mcp-server", label: "MCP Server 接入" },
+      { id: "quality-skill", label: "写高质量 Skill" },
+      { id: "multi-agent", label: "多 Agent 协作" },
+      { id: "cron-automation", label: "定时任务与自动化" },
+      { id: "mixture-of-agents", label: "Mixture of Agents" },
+    ],
+  },
+  {
+    label: "Layer 3 · 深入", emoji: "🔬",
+    items: [
+      { id: "function-calling", label: "Function Calling 格式" },
+      { id: "hermes-models", label: "Hermes 模型家族" },
+      { id: "agent-loop", label: "Agent Loop 源码" },
+      { id: "prompt-builder", label: "Prompt Builder 10 层" },
+      { id: "context-compression", label: "Context Compression" },
+      { id: "tool-internals", label: "工具系统内核" },
+      { id: "gateway-architecture", label: "Gateway 架构" },
+      { id: "ptc", label: "PTC 编程式调用" },
+      { id: "rl-gepa", label: "RL + GEPA 自进化" },
+    ],
+  },
 ];
 
 export const allSectionIds = navigation.flatMap((g) => g.items.map((item) => item.id));
