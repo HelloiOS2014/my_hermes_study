@@ -47,12 +47,12 @@ export function MessagingPlatforms() {
         links={[
           {
             title: "Hermes Gateway 部署完全指南",
-            url: "https://medium.com/@hermes-agent/gateway-deployment-guide",
+            url: "https://hermes-agent.nousresearch.com/docs/",
             source: "Medium",
           },
           {
             title: "Supported Platforms List",
-            url: "https://docs.hermes-agent.dev/platforms",
+            url: "https://hermes-agent.nousresearch.com/docs/",
             source: "Official Docs",
           },
         ]}

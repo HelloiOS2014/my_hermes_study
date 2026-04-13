@@ -152,12 +152,12 @@ export function FullPlugin() {
         links={[
           {
             title: "Hermes Plugin Building Guide",
-            url: "https://docs.hermes-agent.dev/guides/building-plugins",
+            url: "https://hermes-agent.nousresearch.com/docs/guides/build-a-hermes-plugin",
             source: "Official Docs",
           },
           {
             title: "Plugin API Reference",
-            url: "https://docs.hermes-agent.dev/api/plugin-class",
+            url: "https://hermes-agent.nousresearch.com/docs/guides/build-a-hermes-plugin",
             source: "Official Docs",
           },
         ]}

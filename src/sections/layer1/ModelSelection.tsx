@@ -34,7 +34,7 @@ export function ModelSelection() {
         links={[
           {
             title: "Hermes 配置参考（config.yaml）",
-            url: "https://docs.hermes-agent.dev/configuration",
+            url: "https://hermes-agent.nousresearch.com/docs/user-guide/configuration",
             source: "Official Docs",
           },
           {

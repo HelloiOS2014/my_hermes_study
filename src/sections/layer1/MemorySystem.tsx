@@ -71,7 +71,7 @@ export function MemorySystem() {
         links={[
           {
             title: "Hermes Memory Architecture Deep Dive",
-            url: "https://hermes-agent.substack.com/p/memory-architecture",
+            url: "https://mranand.substack.com/p/inside-hermes-agent-how-a-self-improving",
             source: "Substack",
           },
           {

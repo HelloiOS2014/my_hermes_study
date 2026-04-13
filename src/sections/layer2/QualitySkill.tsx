@@ -122,7 +122,7 @@ export function QualitySkill() {
         links={[
           {
             title: "Hermes Skill 自动覆盖问题分析与应对",
-            url: "https://bswen.com/hermes-skill-overwrite-strategies",
+            url: "https://docs.bswen.com/blog/2026-04-07-hermes-ai-overwrites-skills/",
             source: "BSWEN",
           },
           {

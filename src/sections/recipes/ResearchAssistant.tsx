@@ -143,12 +143,12 @@ export function ResearchAssistant() {
         links={[
           {
             title: "awesome-hermes-agent: research-agent 项目",
-            url: "https://github.com/hermes-agent/awesome-hermes-agent#research-agent",
+            url: "https://github.com/0xNyk/awesome-hermes-agent",
             source: "GitHub",
           },
           {
             title: "Building AI Research Assistants with Tool Use",
-            url: "https://arxiv.org/abs/2403.04746",
+            url: "https://arxiv.org/pdf/2408.11857",
             source: "arXiv",
           },
         ]}

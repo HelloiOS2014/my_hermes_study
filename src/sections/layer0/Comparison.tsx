@@ -102,7 +102,7 @@ export function Comparison() {
         links={[
           {
             title: "AI Agent Frameworks Compared (2025)",
-            url: "https://www.turingpost.com/p/ai-agent-frameworks-compared",
+            url: "https://www.turingpost.com/p/hermes",
             source: "TuringPost",
           },
         ]}

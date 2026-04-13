@@ -74,12 +74,12 @@ export function SkillsSystem() {
         links={[
           {
             title: "Hermes Skills 系统详解",
-            url: "https://bswen.com/hermes-skills-deep-dive",
+            url: "https://docs.bswen.com/blog/2026-04-07-hermes-ai-overwrites-skills/",
             source: "BSWEN",
           },
           {
             title: "Procedural Memory in AI Agents",
-            url: "https://arxiv.org/abs/2304.03442",
+            url: "https://arxiv.org/pdf/2408.11857",
             source: "arXiv",
           },
         ]}

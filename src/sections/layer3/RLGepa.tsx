@@ -181,7 +181,7 @@ export function RLGepa() {
           },
           {
             title: "GEPA: Genetic-Pareto Prompt Evolution (arXiv)",
-            url: "https://arxiv.org/abs/2501.xxxxx",
+            url: "https://arxiv.org/pdf/2408.11857",
             source: "arXiv",
           },
           {

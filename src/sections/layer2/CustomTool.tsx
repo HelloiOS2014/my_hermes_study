@@ -164,7 +164,7 @@ export function CustomTool() {
         links={[
           {
             title: "Hermes 官方 Adding Tools Guide",
-            url: "https://docs.hermes-agent.dev/guides/adding-tools",
+            url: "https://hermes-agent.nousresearch.com/docs/developer-guide/adding-tools/",
             source: "Official Docs",
           },
           {

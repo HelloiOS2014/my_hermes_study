@@ -100,7 +100,7 @@ export function CommunityGallery() {
         links={[
           {
             title: "awesome-hermes-agent：社区项目完整列表",
-            url: "https://github.com/hermes-agent/awesome-hermes-agent",
+            url: "https://github.com/0xNyk/awesome-hermes-agent",
             source: "GitHub",
           },
           {

@@ -71,12 +71,12 @@ export function SoulMd() {
         links={[
           {
             title: "SOUL.md 编写指南",
-            url: "https://docs.hermes-agent.dev/soul-md",
+            url: "https://hermes-agent.nousresearch.com/docs/",
             source: "Official Docs",
           },
           {
             title: "System Prompt 最佳实践",
-            url: "https://docs.anthropic.com/claude/docs/system-prompts",
+            url: "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching",
             source: "Anthropic Docs",
           },
         ]}

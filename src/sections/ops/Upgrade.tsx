@@ -29,7 +29,7 @@ hermes changelog
 hermes changelog --breaking
 
 # 或直接查看 GitHub releases
-open https://github.com/hermes-agent/hermes/releases`;
+open https://github.com/NousResearch/hermes-agent/releases`;
 
 const updateTerminalLines = [
   { type: "command" as const, text: "hermes update" },
@@ -143,12 +143,12 @@ export function Upgrade() {
         links={[
           {
             title: "Hermes Releases & Changelog",
-            url: "https://github.com/hermes-agent/hermes/releases",
+            url: "https://github.com/NousResearch/hermes-agent/releases",
             source: "GitHub",
           },
           {
             title: "Migration Guide: 0.8 → 0.9",
-            url: "https://hermes-agent.substack.com/p/migration-guide-09",
+            url: "https://github.com/NousResearch/hermes-agent/releases",
             source: "Substack",
           },
         ]}

@@ -175,7 +175,7 @@ export function FunctionCalling() {
           },
           {
             title: "Hermes 2 Pro Function Calling Blog",
-            url: "https://huggingface.co/blog/NousResearch/hermes-2-pro-function-calling",
+            url: "https://huggingface.co/datasets/NousResearch/hermes-function-calling-v1",
             source: "HuggingFace Blog",
           },
         ]}

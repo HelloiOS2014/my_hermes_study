@@ -171,7 +171,7 @@ export function Messenger() {
         links={[
           {
             title: "Hermes Gateway 部署完全指南",
-            url: "https://medium.com/@hermes-agent/gateway-deployment-guide",
+            url: "https://hermes-agent.nousresearch.com/docs/",
             source: "Medium",
           },
           {
