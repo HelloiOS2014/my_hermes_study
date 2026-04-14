@@ -32,6 +32,8 @@
 
 **删除：** `src/sections/layer0/QuickStart.tsx`（内容拆分到 0.4、0.5、0.6）
 
+**⚠️ 锚点迁移：** 删除 QuickStart 后 `#quick-start` 锚点失效。实现时需全局搜索 `quick-start` 引用（navigation.ts、其他 section 内链），将其改为 `installation`。
+
 ---
 
 ## 二、navigation.ts 变更
@@ -61,7 +63,9 @@ Layer 0 的 items 从 4 个变为 11 个：
 
 ## 三、各 Section 详细设计
 
-### 0.1 WhatIsHermes — 保留不动
+### 0.1 WhatIsHermes — 微改
+
+仅修改 TypewriterTitle 的 subtitle：`"5 分钟建立直觉"` → `"从零到跑通"`。其余内容不动。
 
 ### 0.2 Comparison — 保留不动
 
@@ -224,6 +228,8 @@ Terminal 动画展示验证命令 + 期望输出。
 | OpenRouter | 取决于模型 | 略有加价 | 因模型而异 |
 | Ollama | 本地模型 | 免费 | 免费（电费除外） |
 
+*以上为粗略估算，实际费用取决于对话长度、input/output token 比例和汇率。详细价格请查看各 provider 官网。*
+
 提示：开启 Smart Model Routing 后日常使用可省 70-80%（简单问题用便宜模型）
 
 #### 获取步骤（TabPanel，3 个 tab）
@@ -314,6 +320,8 @@ $ hermes
 说明：setup wizard 会检测你在 `.env` 中配了哪些 key，只显示对应的 provider。不需要提前手动编辑 config.yaml。
 
 如果已经运行过，可以用 `hermes setup` 重新进入 wizard。
+
+**⚠️ 实现注意：** 上述 wizard 流程是推断的。实现时需运行 `hermes setup` 捕获实际 wizard 输出，以此为准制作 Terminal 动画内容。
 
 #### Part 2: 第一次对话 Demo
 
@@ -529,7 +537,9 @@ platform_toolsets:
 
 也可以用 `hermes tools` 命令交互式配置。
 
-**交互组件：** **ConfigExplorer**（新组件）— 左栏 6 张场景卡片（标题是问句），点击展开配置方法 + config 片段 + 说明。右栏固定显示 config.yaml 预览，选中场景时对应区域高亮。
+**⚠️ 实现注意：** 所有 config.yaml 字段名需对照 hermes-agent 仓库中的 `cli-config.yaml.example` 逐一验证。上述片段中的字段名（如 `smart_model_routing.cheap_model`、`compression.protected_messages`、`platform_toolsets.cli.execute_code`）是基于调研推断的，可能与实际不符。
+
+**交互组件：** **ConfigExplorer**（新组件）— 左栏 6 张场景卡片（标题是问句），点击展开配置方法 + config 片段 + 说明。右栏固定显示 config.yaml 预览，选中场景时对应区域高亮。**移动端（<768px）**改为纵向堆叠：场景卡片在上，展开时内联显示 config 片段，隐藏右栏预览。
 
 **末尾链接：** ExtendedReading → 附录 config.yaml 完整速查（`appendix-config`）
 
@@ -775,7 +785,8 @@ hermes gateway run
 **Provider 列表：**
 - LLM: OpenRouter, Anthropic, Google/Gemini, 智谱GLM, Kimi, MiniMax, Hugging Face, Ollama (local)
 - Tools: Exa (web search), Firecrawl (web crawl), fal.ai (image gen), Honcho (user modeling)
-- Auth: Nous Portal OAuth (`hermes login`)
+
+注：Nous Portal OAuth (`hermes login`) 是命令行 OAuth 流程，不是 env 变量，不放在 checkbox 中。在 0.5 正文里单独提一句作为替代方案。
 
 **交互逻辑：**
 - 勾选 provider → 对应的 `KEY=` 出现在右侧预览
@@ -841,7 +852,7 @@ hermes gateway run
 
 ## 八、不变的部分
 
-- `src/sections/layer0/WhatIsHermes.tsx` — 不修改
+- `src/sections/layer0/WhatIsHermes.tsx` — 仅改 TypewriterTitle subtitle（"5 分钟建立直觉" → "从零到跑通"）
 - `src/sections/layer0/Comparison.tsx` — 不修改
 - `src/sections/layer0/ArchitectureOverview.tsx` — 只改 TypewriterTitle 编号
 - 所有其他 Layer (1/2/3)、Recipes、Ops、Appendix 的 section — 不修改
