@@ -5,7 +5,14 @@ import { Footer } from "./components/layout/Footer";
 // Layer 0
 import { WhatIsHermes } from "./sections/layer0/WhatIsHermes";
 import { Comparison } from "./sections/layer0/Comparison";
-import { QuickStart } from "./sections/layer0/QuickStart";
+import { Prerequisites } from "./sections/layer0/Prerequisites";
+import { Installation } from "./sections/layer0/Installation";
+import { ApiKeys } from "./sections/layer0/ApiKeys";
+import { FirstConversation } from "./sections/layer0/FirstConversation";
+import { DirectoryStructure } from "./sections/layer0/DirectoryStructure";
+import { ConfigEssentials } from "./sections/layer0/ConfigEssentials";
+import { SoulMdIntro } from "./sections/layer0/SoulMdIntro";
+import { ConnectPlatform } from "./sections/layer0/ConnectPlatform";
 import { ArchitectureOverview } from "./sections/layer0/ArchitectureOverview";
 // Layer 1
 import { CLIOverview } from "./sections/layer1/CLIOverview";
@@ -64,7 +71,14 @@ export default function App() {
           {/* Layer 0 · 初见 */}
           <WhatIsHermes />
           <Comparison />
-          <QuickStart />
+          <Prerequisites />
+          <Installation />
+          <ApiKeys />
+          <FirstConversation />
+          <DirectoryStructure />
+          <ConfigEssentials />
+          <SoulMdIntro />
+          <ConnectPlatform />
           <ArchitectureOverview />
           {/* Layer 1 · 上手 */}
           <CLIOverview />

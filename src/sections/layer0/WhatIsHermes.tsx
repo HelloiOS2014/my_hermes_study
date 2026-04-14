@@ -12,7 +12,7 @@ const stats = [
 export function WhatIsHermes() {
   return (
     <Section id="what-is-hermes">
-      <TypewriterTitle text="Layer 0 · 初见" subtitle="5 分钟建立直觉" />
+      <TypewriterTitle text="Layer 0 · 初见" subtitle="从零到跑通" />
 
       <h3 className="text-xl font-semibold">What is Hermes Agent?</h3>
       <p className="mt-3 leading-relaxed text-text-secondary">
