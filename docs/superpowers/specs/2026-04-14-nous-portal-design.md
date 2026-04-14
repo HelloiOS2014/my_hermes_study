@@ -36,7 +36,7 @@ Layer 0 总计从 11 section 变为 **12 section**。
 
 Nous Portal 是 Hermes Agent 官方的模型推理平台（portal.nousresearch.com）。通过它，你不需要到处找 API key — 一个账号就能访问模型和工具。
 
-免费档可以直接使用 Xiaomi MiMo-V2 Pro（1M 长上下文、强工具调用）和 MiMo-V2 Omni（全模态理解）。
+免费档可以直接使用 Xiaomi MiMo-V2 Pro（1M 长上下文、强工具调用）和 MiMo-V2 Omni（全模态理解）。免费模型列表可能随时间变化，以 Nous Portal 实际显示为准。
 
 ### Part 1: 3 步登录
 
@@ -60,6 +60,12 @@ $ hermes login
 - Agent key 自动续期，过期前自动重新获取
 
 **⚠️ 实现注意：** 上述 Terminal 动画内容是推断的。实现时需运行 `hermes login` 捕获实际输出，以此为准。
+
+**登录后的凭证管理：**
+简短提示 `hermes auth` 命令：
+- `hermes auth list` — 查看当前已登录的凭证
+- `hermes auth remove nous` — 登出 Nous Portal
+- `hermes auth` — 进入交互式凭证管理菜单
 
 ### Part 2: 免费可用的模型
 
@@ -136,8 +142,8 @@ ExtendedReading：
 
 2. **顶部加引导 callout:**
    在 TypewriterTitle 之后、决策树之前，加一个 accent 色 callout：
-   "更简单的方式？用 Nous Portal 一步登录，免费模型立即可用。"
-   带一个链接/按钮滚动到 `#nous-portal`。
+   "已经通过 Nous Portal 登录了？可以跳过这一节，直接去「首次启动」。"
+   带一个链接/按钮滚动到 `#first-conversation`。
 
 3. **EnvBuilder 保持不变**
 
