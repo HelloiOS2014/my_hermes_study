@@ -74,7 +74,7 @@ export function DirectoryStructure() {
   return (
     <Section id="directory-structure">
       <TypewriterTitle
-        text="0.7 目录结构一览"
+        text="0.8 目录结构一览"
         subtitle="了解 ~/.hermes/ 里的每个文件"
       />
 

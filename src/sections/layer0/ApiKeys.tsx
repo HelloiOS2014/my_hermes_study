@@ -38,9 +38,22 @@ export function ApiKeys() {
   return (
     <Section id="api-keys">
       <TypewriterTitle
-        text="0.5 获取 API Key"
-        subtitle="选对 Provider，配好密钥"
+        text="0.6 手动配置 API Keys"
+        subtitle="需要特定 Provider？手动配置 API Key"
       />
+
+      <div className="mb-8 rounded-lg border border-accent/30 bg-accent/5 p-4">
+        <p className="text-sm text-text-secondary">
+          已经通过 Nous Portal 登录了？可以
+          <button
+            onClick={() => document.getElementById("first-conversation")?.scrollIntoView({ behavior: "smooth" })}
+            className="mx-1 text-accent underline hover:no-underline"
+          >
+            跳过这一节，直接去「首次启动」
+          </button>
+          。这一节是给需要手动配置特定 Provider 的用户准备的。
+        </p>
+      </div>
 
       {/* Decision tree */}
       <h3 className="text-lg font-semibold">该选哪个 Provider？</h3>

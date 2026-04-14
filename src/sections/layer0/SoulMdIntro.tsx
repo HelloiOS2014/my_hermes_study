@@ -67,7 +67,7 @@ export function SoulMdIntro() {
   return (
     <Section id="soul-md-intro">
       <TypewriterTitle
-        text="0.9 SOUL.md 人格定制"
+        text="0.10 SOUL.md 人格定制"
         subtitle="定义你的 Agent 是谁"
       />
 

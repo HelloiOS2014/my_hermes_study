@@ -43,7 +43,7 @@ export function ArchitectureOverview() {
   return (
     <Section id="architecture">
       <TypewriterTitle
-        text="0.11 架构鸟瞰"
+        text="0.12 架构鸟瞰"
         subtitle="点击模块跳转到详细章节"
       />
 

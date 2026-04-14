@@ -7,7 +7,7 @@ export function ConfigEssentials() {
   return (
     <Section id="config-essentials">
       <TypewriterTitle
-        text="0.8 常用配置场景"
+        text="0.9 常用配置场景"
         subtitle="你想做什么，改哪里"
       />
 

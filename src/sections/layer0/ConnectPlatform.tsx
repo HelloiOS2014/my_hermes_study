@@ -51,7 +51,7 @@ export function ConnectPlatform() {
   return (
     <Section id="connect-platform">
       <TypewriterTitle
-        text="0.10 连接消息平台"
+        text="0.11 连接消息平台"
         subtitle="让 Agent 上手机"
       />
 

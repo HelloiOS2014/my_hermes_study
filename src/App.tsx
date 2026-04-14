@@ -7,6 +7,7 @@ import { WhatIsHermes } from "./sections/layer0/WhatIsHermes";
 import { Comparison } from "./sections/layer0/Comparison";
 import { Prerequisites } from "./sections/layer0/Prerequisites";
 import { Installation } from "./sections/layer0/Installation";
+import { NousPortal } from "./sections/layer0/NousPortal";
 import { ApiKeys } from "./sections/layer0/ApiKeys";
 import { FirstConversation } from "./sections/layer0/FirstConversation";
 import { DirectoryStructure } from "./sections/layer0/DirectoryStructure";
@@ -73,6 +74,7 @@ export default function App() {
           <Comparison />
           <Prerequisites />
           <Installation />
+          <NousPortal />
           <ApiKeys />
           <FirstConversation />
           <DirectoryStructure />
